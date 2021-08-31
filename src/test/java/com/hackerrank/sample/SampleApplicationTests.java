@@ -52,7 +52,7 @@ class SampleApplicationTests {
     @Test
     public void customHelloTest() throws Exception {
 
-        String jsonContent = "{\"message\":\"customHello1\", \"echo\":\"Custom Custom Hello World!\"}";
+        String jsonContent = "{\"message\":\"customHello\", \"echo\":\"Custom Custom Hello World!\"}";
         mockMvc.perform(post("/customHello")
                 .param("message", "Custom Hello World!")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -65,7 +65,7 @@ class SampleApplicationTests {
     @Test
     public void customHelloWithEmptyParamTest() throws Exception {
 
-        String jsonContent = "{\"message\":\"customHello2\", \"echo\": \"Custom \"}";
+        String jsonContent = "{\"message\":\"customHello\", \"echo\": \"Custom \"}";
         mockMvc.perform(post("/customHello")
                 .param("message", "")
                 .contentType(MediaType.APPLICATION_JSON)
